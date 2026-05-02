@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Risk Disclosure - DotVest</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet" />
+    <style>
+      :root { --primary: #d4af37; --primary-dark: #b08c2b; --primary-light: #e8c55a; --secondary: #0a0a0a; --light: #f8f8f8; --dark: #0f0f0f; --gray: #1a1a1a; --gray-light: #2a2a2a; --text-light: #e0e0e0; --text-muted: #b0b0b0; --text-dark: #333; --accent: #ff6b35; }
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      body { font-family: "Inter", sans-serif; background: linear-gradient(135deg, var(--dark), var(--gray)); color: var(--text-light); overflow-x: hidden; line-height: 1.7; min-height: 100vh; display: flex; flex-direction: column; }
+      header { background: rgba(15, 15, 15, 0.95); padding: 20px 30px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); border-bottom: 1px solid rgba(212, 175, 55, 0.15); }
+      .header-container { display: flex; justify-content: space-between; align-items: center; max-width: 1400px; margin: 0 auto; }
+      .nav-back { color: var(--primary); text-decoration: none; font-weight: 600; display: flex; align-items: center; gap: 8px; transition: all 0.3s ease; }
+      .nav-back:hover { transform: translateX(-3px); color: var(--primary-light); }
+      main { flex: 1; display: flex; align-items: center; justify-content: center; padding: 60px 30px; }
+      .coming-soon-container { text-align: center; max-width: 600px; }
+      .icon-box { width: 120px; height: 120px; background: linear-gradient(135deg, var(--primary), var(--primary-light)); border-radius: 30px; display: flex; align-items: center; justify-content: center; margin: 0 auto 40px; font-size: 3rem; box-shadow: 0 15px 40px rgba(212, 175, 55, 0.3); animation: float 3s ease-in-out infinite; }
+      @keyframes float { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-20px); } }
+      h1 { font-family: "Playfair Display", serif; font-size: 2.8rem; background: linear-gradient(135deg, var(--primary), var(--primary-light)); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 20px; font-weight: 700; }
+      .page-title { color: var(--text-light); font-size: 1.6rem; margin-bottom: 30px; font-weight: 600; }
+      p { color: var(--text-muted); font-size: 1.1rem; line-height: 1.8; margin-bottom: 30px; }
+      .status-badge { display: inline-block; background: rgba(212, 175, 55, 0.1); border: 2px solid rgba(212, 175, 55, 0.3); color: var(--primary); padding: 12px 24px; border-radius: 50px; font-weight: 600; font-size: 0.95rem; margin-bottom: 40px; text-transform: uppercase; letter-spacing: 1px; }
+      .cta-button { background: linear-gradient(135deg, var(--primary), var(--primary-light)); color: var(--dark); padding: 16px 40px; border: none; border-radius: 12px; font-weight: 600; font-size: 1rem; cursor: pointer; transition: all 0.3s ease; text-decoration: none; display: inline-block; box-shadow: 0 4px 15px rgba(212, 175, 55, 0.2); }
+      .cta-button:hover { transform: translateY(-2px); box-shadow: 0 8px 25px rgba(212, 175, 55, 0.4); }
+      .divider { height: 1px; background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.3), transparent); margin: 50px 0; }
+      .info-box { background: rgba(26, 26, 26, 0.6); border: 1px solid rgba(212, 175, 55, 0.2); border-radius: 16px; padding: 30px; margin-top: 40px; }
+      .info-box h3 { color: var(--primary); margin-bottom: 15px; font-size: 1.2rem; }
+      .info-box p { font-size: 1rem; margin-bottom: 0; }
+      footer { background: rgba(15, 15, 15, 0.95); padding: 30px; text-align: center; border-top: 1px solid rgba(212, 175, 55, 0.1); color: var(--text-muted); font-size: 0.9rem; }
+      @media (max-width: 768px) { h1 { font-size: 2.2rem; } .page-title { font-size: 1.4rem; } p { font-size: 1rem; } .icon-box { width: 100px; height: 100px; font-size: 2.5rem; } }
+    </style>
+</head>
+<body>
+    <header>
+      <div class="header-container">
+        <img src="logotsp.svg" alt="Logo" style="height: 50px; width: auto;" />
+        <a href="index.html" class="nav-back">
+          <i class="fas fa-arrow-left"></i> Back to Home
+        </a>
+      </div>
+    </header>
+    <main>
+      <div class="coming-soon-container">
+        <div class="icon-box">
+          <i class="fas fa-exclamation-triangle"></i>
+        </div>
+        <h1>Coming Soon</h1>
+        <p class="page-title">Risk Disclosure</p>
+        <div class="status-badge">Under Development</div>
+        <p>
+          Our comprehensive Risk Disclosure outlines investment risks, market
+          volatility factors, and important considerations for DotVest investors.
+        </p>
+        <a href="index.html" class="cta-button">
+          <i class="fas fa-home"></i> Return to Home
+        </a>
+        <div class="divider"></div>
+        <div class="info-box">
+          <h3><i class="fas fa-envelope"></i> Risk Questions</h3>
+          <p>
+            Contact our investment advisors at <strong>support@dotvests.com</strong>
+          </p>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <p>&copy; 2025 DotVest. All rights reserved. | Tokenizing Africa's Financial Future</p>
+    </footer>
+</body>
+</html>

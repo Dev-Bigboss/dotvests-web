@@ -1,0 +1,113 @@
+<svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#d4af37;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#e8c55a;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ff6b35;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ff8555;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="successGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#10b981;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#34d399;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="400" height="400" fill="#0f0f0f"/>
+
+  <!-- Decorative elements -->
+  <circle cx="350" cy="50" r="35" fill="url(#goldGrad)" opacity="0.1"/>
+  <circle cx="50" cy="350" r="40" fill="url(#accentGrad)" opacity="0.12"/>
+
+  <!-- Africa Map Outline -->
+  <g opacity="0.8">
+    <!-- Simplified Africa continent -->
+    <path d="M 80 100 Q 100 80 120 85 L 140 80 Q 150 100 155 120 L 160 150 Q 165 170 160 190 L 165 210 Q 170 240 160 270 L 150 290 Q 130 310 110 320 Q 90 315 80 300 L 75 270 Q 70 240 75 200 L 70 150 Q 72 120 80 100 Z"
+          fill="none" stroke="url(#goldGrad)" stroke-width="2"/>
+
+    <!-- Major regions highlighted -->
+    <circle cx="100" cy="150" r="8" fill="url(#accentGrad)" opacity="0.6"/>
+    <circle cx="120" cy="200" r="6" fill="url(#accentGrad)" opacity="0.6"/>
+    <circle cx="105" cy="250" r="7" fill="url(#accentGrad)" opacity="0.6"/>
+  </g>
+
+  <!-- Growth Chart (Right side) -->
+  <g>
+    <!-- Grid lines -->
+    <line x1="200" y1="100" x2="200" y2="320" stroke="url(#goldGrad)" stroke-width="1" opacity="0.3"/>
+    <line x1="200" y1="320" x2="360" y2="320" stroke="url(#goldGrad)" stroke-width="1" opacity="0.3"/>
+
+    <!-- Bars showing growth -->
+    <g>
+      <!-- Bar 1 -->
+      <rect x="220" y="260" width="20" height="60" fill="url(#successGrad)" opacity="0.7"/>
+      <circle cx="230" cy="260" r="3" fill="url(#goldGrad)"/>
+
+      <!-- Bar 2 -->
+      <rect x="250" y="230" width="20" height="90" fill="url(#successGrad)" opacity="0.8"/>
+      <circle cx="260" cy="230" r="3" fill="url(#goldGrad)"/>
+
+      <!-- Bar 3 -->
+      <rect x="280" y="180" width="20" height="140" fill="url(#successGrad)" opacity="0.9"/>
+      <circle cx="290" cy="180" r="3" fill="url(#goldGrad)"/>
+
+      <!-- Bar 4 -->
+      <rect x="310" y="140" width="20" height="180" fill="url(#accentGrad)" opacity="0.95"/>
+      <circle cx="320" cy="140" r="3" fill="url(#goldGrad)"/>
+    </g>
+
+    <!-- Growth trend line with animation -->
+    <polyline points="230,260 260,230 290,180 320,140"
+              fill="none" stroke="url(#goldGrad)" stroke-width="2" stroke-linecap="round"/>
+
+    <!-- Animated upward arrow -->
+    <g opacity="0.7">
+      <line x1="340" y1="160" x2="340" y2="110" stroke="url(#accentGrad)" stroke-width="3" stroke-linecap="round"/>
+      <path d="M 335 120 L 340 105 L 345 120" fill="url(#accentGrad)"/>
+      <animate attributeName="opacity" values="0.3;1;0.3" dur="2s" repeatCount="indefinite"/>
+    </g>
+  </g>
+
+  <!-- Investment nodes/opportunities -->
+  <g>
+    <!-- Node 1 - Banking -->
+    <circle cx="110" cy="130" r="12" fill="url(#goldGrad)"/>
+    <text x="110" y="138" text-anchor="middle" fill="#0f0f0f" font-size="14" font-weight="bold">🏦</text>
+    <line x1="122" y1="130" x2="200" y2="150" stroke="url(#goldGrad)" stroke-width="1" opacity="0.5" stroke-dasharray="3,3"/>
+
+    <!-- Node 2 - Energy -->
+    <circle cx="125" cy="210" r="12" fill="url(#accentGrad)"/>
+    <text x="125" y="218" text-anchor="middle" fill="#0f0f0f" font-size="14" font-weight="bold">⚡</text>
+    <line x1="137" y1="210" x2="200" y2="200" stroke="url(#accentGrad)" stroke-width="1" opacity="0.5" stroke-dasharray="3,3"/>
+
+    <!-- Node 3 - Growth -->
+    <circle cx="110" cy="280" r="12" fill="url(#successGrad)"/>
+    <text x="110" y="288" text-anchor="middle" fill="#0f0f0f" font-size="14" font-weight="bold">📈</text>
+    <line x1="122" y1="280" x2="200" y2="250" stroke="url(#successGrad)" stroke-width="1" opacity="0.5" stroke-dasharray="3,3"/>
+  </g>
+
+  <!-- Central hub -->
+  <circle cx="200" cy="200" r="16" fill="url(#goldGrad)"/>
+  <circle cx="200" cy="200" r="12" fill="#0f0f0f"/>
+  <text x="200" y="208" text-anchor="middle" fill="url(#goldGrad)" font-size="12" font-weight="bold">DV</text>
+
+  <!-- Pulse effect from hub -->
+  <circle cx="200" cy="200" r="20" fill="none" stroke="url(#goldGrad)" stroke-width="1.5" opacity="0.6">
+    <animate attributeName="r" values="16;35;16" dur="2.5s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="1;0;1" dur="2.5s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Statistics indicators -->
+  <g>
+    <!-- Market cap indicator -->
+    <text x="50" y="360" fill="url(#goldGrad)" font-size="11" font-weight="600">$42B+ Market Cap</text>
+
+    <!-- Growth rate -->
+    <text x="250" y="360" fill="url(#successGrad)" font-size="11" font-weight="600">8.7% Annual Growth</text>
+  </g>
+
+  <!-- Title -->
+  <text x="200" y="40" text-anchor="middle" fill="url(#goldGrad)" font-size="20" font-weight="700">African Market Opportunity</text>
+</svg>

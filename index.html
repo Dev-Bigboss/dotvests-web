@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="DotVest is a platform tokenizing African stocks, starting with Nigeria."
+      content="DotVests is a platform tokenizing African stocks, starting with Nigeria."
     />
-    <meta name="author" content="DotVest Team" />
-    <title>DotVest - Tokenizing Africa's Stocks</title>
+    <meta name="author" content="DotVests Team" />
+    <title>DotVests - Tokenizing Africa's Stocks</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -159,6 +159,21 @@
 
       nav a:hover::after {
         width: 100%;
+      }
+
+      /* Mobile Menu Toggle */
+      .mobile-menu-toggle {
+        display: none;
+        background: none;
+        border: none;
+        color: var(--primary);
+        font-size: 1.5rem;
+        cursor: pointer;
+        padding: 8px;
+      }
+
+      .mobile-menu-toggle:hover {
+        color: var(--primary-light);
       }
 
       .cta-button {
@@ -811,8 +826,8 @@
         box-shadow: 0 10px 25px rgba(212, 175, 55, 0.4);
       }
 
-      /* Responsive Design */
-      @media (max-width: 992px) {
+      /* Responsive Design - Tablets & Medium Devices */
+      @media (max-width: 1024px) {
         .about-content,
         .tokenization-content,
         .contact-container,
@@ -832,95 +847,572 @@
         .section-title {
           font-size: 2.4rem;
         }
+
+        .footer-container {
+          grid-template-columns: repeat(2, 1fr) !important;
+        }
       }
 
+      /* Responsive Design - Tablets */
       @media (max-width: 768px) {
-        .disclaimer-banner {
-          font-size: 0.8rem;
-          padding: 10px 20px;
+        header {
+          position: relative;
         }
 
-        nav ul {
+        .header-container {
+          padding: 15px 20px;
+        }
+
+        .disclaimer-banner {
+          font-size: 0.75rem;
+          padding: 8px 15px;
+        }
+
+        .mobile-menu-toggle {
+          display: block;
+        }
+
+        nav {
           display: none;
         }
 
+        nav.active {
+          display: block;
+          position: absolute;
+          top: 100%;
+          left: 0;
+          right: 0;
+          background: rgba(15, 15, 15, 0.98);
+          padding: 20px 0;
+          border-bottom: 1px solid rgba(212, 175, 55, 0.15);
+          z-index: 999;
+        }
+
+        nav ul {
+          flex-direction: column;
+          gap: 0;
+          padding: 0 20px;
+        }
+
+        nav li {
+          padding: 15px 0;
+          border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+        }
+
+        nav a {
+          display: block;
+          font-size: 1.05rem;
+        }
+
+        .cta-button {
+          padding: 12px 24px;
+          font-size: 0.9rem;
+        }
+
         .hero {
-          padding: 120px 20px 60px;
+          padding: 100px 20px 50px;
+          min-height: auto;
         }
 
         .hero h1 {
-          font-size: 2.6rem;
+          font-size: 2.4rem;
+          margin-bottom: 20px;
         }
 
         .hero-subtitle {
-          font-size: 1.2rem;
+          font-size: 1.1rem;
+          margin-bottom: 40px;
         }
 
         .section-title {
-          font-size: 2rem;
+          font-size: 1.8rem;
+          margin-bottom: 50px;
+        }
+
+        .section-title::after {
+          width: 60px;
         }
 
         .countdown {
-          gap: 15px;
+          gap: 12px;
+          margin: 40px 0;
+          flex-wrap: wrap;
         }
 
         .countdown-item {
-          min-width: 90px;
-          padding: 20px 15px;
+          min-width: 85px;
+          padding: 18px 12px;
+          flex: 0 1 calc(25% - 12px);
         }
 
         .countdown-value {
-          font-size: 2.2rem;
+          font-size: 2rem;
+        }
+
+        .countdown-label {
+          font-size: 0.8rem;
         }
 
         .hero-buttons {
           flex-direction: column;
-          gap: 15px;
+          gap: 12px;
+        }
+
+        .hero-buttons a {
+          width: 100%;
+          text-align: center;
         }
 
         section {
-          padding: 80px 20px;
+          padding: 70px 20px;
         }
 
-        .benefits-grid {
-          grid-template-columns: 1fr;
+        .card {
+          padding: 30px 20px;
         }
 
+        .benefits-grid,
         .process-steps {
+          grid-template-columns: 1fr;
+          gap: 30px;
+        }
+
+        .about-image,
+        .market-image {
+          border-radius: 16px;
+          overflow: hidden;
+        }
+
+        .contact-form {
+          padding: 25px 20px;
+        }
+
+        .contact-item {
+          padding: 20px;
+          gap: 15px;
+        }
+
+        .form-control {
+          padding: 14px 16px;
+          font-size: 16px;
+        }
+
+        .footer-container {
           grid-template-columns: 1fr;
           gap: 40px;
         }
 
-        .contact-form {
-          padding: 30px;
-        }
-      }
-
-      @media (max-width: 480px) {
-        .hero h1 {
-          font-size: 2.2rem;
+        .footer-col {
+          text-align: center;
         }
 
-        .countdown-item {
-          min-width: 75px;
-          padding: 15px 10px;
+        .footer-col h3::after {
+          left: 50%;
+          transform: translateX(-50%);
         }
 
-        .countdown-value {
+        .step-icon {
+          width: 70px;
+          height: 70px;
           font-size: 1.8rem;
         }
 
+        .stat-card {
+          padding: 30px 20px;
+        }
+
+        .stat-value {
+          font-size: 2.2rem;
+        }
+
+        .stat-label {
+          font-size: 0.85rem;
+        }
+
+        .market-stats {
+          grid-template-columns: repeat(2, 1fr);
+          gap: 20px;
+          margin-bottom: 40px;
+        }
+
+        .whatsapp {
+          width: 60px;
+          height: 60px;
+          font-size: 26px;
+          bottom: 20px;
+          right: 20px;
+        }
+
+        .scroll-top {
+          width: 45px;
+          height: 45px;
+          font-size: 18px;
+          bottom: 90px;
+          right: 20px;
+        }
+      }
+
+      /* Responsive Design - Small Mobile Phones */
+      @media (max-width: 600px) {
+        .header-container {
+          padding: 12px 15px;
+        }
+
+        .logo-container {
+          height: 45px;
+        }
+
+        .hero {
+          padding: 80px 15px 40px;
+          margin-top: 60px;
+        }
+
+        .hero h1 {
+          font-size: 2rem;
+          line-height: 1.2;
+          margin-bottom: 16px;
+        }
+
+        .hero-subtitle {
+          font-size: 0.95rem;
+          margin-bottom: 30px;
+          line-height: 1.6;
+        }
+
+        .section-title {
+          font-size: 1.6rem;
+          margin-bottom: 40px;
+        }
+
+        .countdown-item {
+          min-width: 70px;
+          padding: 15px 10px;
+          flex: 0 1 calc(25% - 9px);
+        }
+
+        .countdown-value {
+          font-size: 1.6rem;
+        }
+
         .countdown-label {
-          font-size: 0.75rem;
+          font-size: 0.7rem;
+          letter-spacing: 0.5px;
+        }
+
+        section {
+          padding: 60px 15px;
+        }
+
+        .card {
+          padding: 25px 15px;
+        }
+
+        .step {
+          text-align: center;
+        }
+
+        .step h3 {
+          font-size: 1.3rem;
+        }
+
+        .step p {
+          font-size: 0.95rem;
+        }
+
+        .benefit-card h3 {
+          font-size: 1.2rem;
+          gap: 10px;
+        }
+
+        .benefit-card i {
+          font-size: 1.3rem;
+        }
+
+        .benefit-card p {
+          font-size: 0.95rem;
+        }
+
+        .contact-form {
+          padding: 20px 15px;
+        }
+
+        .form-group {
+          margin-bottom: 20px;
+        }
+
+        .form-control {
+          padding: 12px 14px;
+          font-size: 16px;
+        }
+
+        .cta-button {
+          padding: 14px 24px;
+          font-size: 0.9rem;
+          width: 100%;
+        }
+
+        .contact-item {
+          padding: 18px;
+          margin-bottom: 20px;
+        }
+
+        .contact-icon {
+          width: 45px;
+          height: 45px;
+          font-size: 1.1rem;
+        }
+
+        .about-text h3 {
+          font-size: 1.5rem;
+          margin-bottom: 15px;
+        }
+
+        .about-text p {
+          font-size: 0.95rem;
+          margin-bottom: 18px;
+        }
+
+        .token-list {
+          font-size: 0.9rem;
+          margin-left: 20px;
+        }
+
+        .token-list li {
+          margin-bottom: 12px;
+          line-height: 1.5;
         }
 
         .market-stats {
           grid-template-columns: 1fr;
-          gap: 20px;
+          gap: 15px;
         }
 
         .stat-value {
-          font-size: 2.5rem;
+          font-size: 2rem;
+        }
+
+        .stat-label {
+          font-size: 0.8rem;
+        }
+
+        .tokenization-text p {
+          font-size: 1rem;
+        }
+      }
+
+      /* Responsive Design - Extra Small Phones */
+      @media (max-width: 480px) {
+        body {
+          font-size: 14px;
+        }
+
+        header {
+          padding: 8px 0;
+        }
+
+        .disclaimer-banner {
+          font-size: 0.7rem;
+          padding: 6px 12px;
+        }
+
+        .hero {
+          padding: 70px 12px 35px;
+          margin-top: 50px;
+        }
+
+        .hero h1 {
+          font-size: 1.7rem;
+          margin-bottom: 12px;
+        }
+
+        .hero-subtitle {
+          font-size: 0.85rem;
+          margin-bottom: 25px;
+        }
+
+        .section-title {
+          font-size: 1.4rem;
+          margin-bottom: 35px;
+        }
+
+        .countdown {
+          gap: 8px;
+          margin: 30px 0;
+        }
+
+        .countdown-item {
+          min-width: 60px;
+          padding: 12px 8px;
+          flex: 0 1 calc(25% - 6px);
+          border-radius: 12px;
+        }
+
+        .countdown-value {
+          font-size: 1.4rem;
+          margin-bottom: 4px;
+        }
+
+        .countdown-label {
+          font-size: 0.65rem;
+          letter-spacing: 0;
+        }
+
+        .hero-buttons {
+          gap: 10px;
+        }
+
+        .cta-button {
+          padding: 12px 20px;
+          font-size: 0.85rem;
+          border-radius: 10px;
+        }
+
+        section {
+          padding: 50px 12px;
+        }
+
+        .section-container {
+          margin: 0;
+        }
+
+        .card {
+          padding: 20px 12px;
+          border-radius: 16px;
+        }
+
+        .step-icon {
+          width: 60px;
+          height: 60px;
+          font-size: 1.6rem;
+          margin-bottom: 15px;
+        }
+
+        .step h3 {
+          font-size: 1.1rem;
+          margin-bottom: 10px;
+        }
+
+        .step p {
+          font-size: 0.85rem;
+          line-height: 1.5;
+        }
+
+        .benefit-card h3 {
+          font-size: 1.05rem;
+          margin-bottom: 12px;
+        }
+
+        .benefit-card i {
+          font-size: 1.2rem;
+        }
+
+        .contact-form {
+          padding: 15px 12px;
+        }
+
+        .form-group {
+          margin-bottom: 15px;
+        }
+
+        .form-group label {
+          font-size: 0.85rem;
+          margin-bottom: 6px;
+        }
+
+        .form-control {
+          padding: 10px 12px;
+          font-size: 14px;
+          border-radius: 8px;
+        }
+
+        textarea.form-control {
+          min-height: 100px;
+        }
+
+        .contact-icon {
+          width: 40px;
+          height: 40px;
+          font-size: 1rem;
+        }
+
+        .contact-item h4 {
+          font-size: 0.95rem;
+          margin-bottom: 4px;
+        }
+
+        .contact-item p {
+          font-size: 0.85rem;
+        }
+
+        .about-text h3 {
+          font-size: 1.3rem;
+          margin-bottom: 12px;
+        }
+
+        .about-text p {
+          font-size: 0.85rem;
+          margin-bottom: 15px;
+          line-height: 1.5;
+        }
+
+        .token-list {
+          font-size: 0.8rem;
+          margin-left: 16px;
+        }
+
+        .token-list li {
+          margin-bottom: 8px;
+          line-height: 1.4;
+        }
+
+        .market-stats {
+          grid-template-columns: 1fr;
+          gap: 12px;
+          margin-bottom: 30px;
+        }
+
+        .stat-value {
+          font-size: 1.8rem;
+        }
+
+        .stat-label {
+          font-size: 0.75rem;
+          letter-spacing: 0;
+        }
+
+        .footer-col h3 {
+          font-size: 1.1rem;
+          margin-bottom: 15px;
+        }
+
+        .footer-col p {
+          font-size: 0.85rem;
+        }
+
+        .footer-links a {
+          font-size: 0.85rem;
+        }
+
+        .copyright {
+          font-size: 0.75rem;
+          padding-top: 30px;
+          margin-top: 30px;
+        }
+
+        .whatsapp {
+          width: 55px;
+          height: 55px;
+          font-size: 24px;
+          bottom: 15px;
+          right: 15px;
+        }
+
+        .scroll-top {
+          width: 40px;
+          height: 40px;
+          font-size: 16px;
+          bottom: 80px;
+          right: 15px;
         }
       }
     </style>
@@ -929,7 +1421,7 @@
     <!-- Disclaimer Banner -->
     <div class="disclaimer-banner">
       <i class="fas fa-info-circle"></i>
-      DotVest is currently in pre-launch phase. No investment services are
+      Dotvests is currently in pre-launch phase. No investment services are
       offered at this time. All content is for informational purposes only.
     </div>
 
@@ -949,7 +1441,13 @@
             <li><a href="#contact">Contact</a></li>
           </ul>
         </nav>
-        <a href="#contact" class="cta-button">Get Started</a>
+
+        <div style="display: flex; align-items: center; gap: 15px;">
+          <a href="#contact" class="cta-button">Get Started</a>
+          <button class="mobile-menu-toggle" title="Toggle Menu">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
       </div>
     </header>
 
@@ -994,12 +1492,12 @@
     <!-- About Section -->
     <section id="about" class="section">
       <div class="section-container">
-        <h2 class="section-title">About DotVest</h2>
+        <h2 class="section-title">About Dotvests</h2>
         <div class="about-content">
           <div class="about-text">
             <h3>Bridging Traditional Finance and Blockchain</h3>
             <p>
-              DotVest is revolutionizing African financial markets by leveraging
+              Dotvests is revolutionizing African financial markets by leveraging
               blockchain technology to tokenize stocks, making investment
               opportunities accessible to a global audience.
             </p>
@@ -1018,8 +1516,8 @@
           </div>
           <div class="about-image">
             <img
-              src="https://images.unsplash.com/photo-1620288650153-5a9bc7a1a50b?auto=format&fit=crop&w=1200&q=80"
-              alt="African Financial Markets"
+              src="finance-bridge.svg"
+              alt="Traditional Finance and Blockchain Bridge"
             />
           </div>
         </div>
@@ -1167,8 +1665,7 @@
                 corporate actions
               </li>
               <li>
-                Multi-chain support (Ethereum, Polygon, Binance Smart Chain,
-                Arbitrum)
+                Native Polymesh blockchain integration for regulatory compliance
               </li>
               <li>
                 Regular third-party security audits and penetration testing
@@ -1299,8 +1796,8 @@
           </div>
           <div class="market-image">
             <img
-              src="https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=1200&q=80"
-              alt="African Economy Growth"
+              src="africa-growth.svg"
+              alt="African Market Growth and Opportunities"
             />
           </div>
         </div>
@@ -1450,7 +1947,7 @@
               <div>
                 <h4>Our Office</h4>
                 <p>
-                  123 Financial District<br />Victoria Island, Lagos<br />Nigeria
+                  23 Effiong Street <br />Off Aka Road, Uyo<br />Nigeria
                 </p>
               </div>
             </div>
@@ -1461,7 +1958,7 @@
               </div>
               <div>
                 <h4>Email Us</h4>
-                <p>info@dotvest.com<br />support@dotvest.com</p>
+                <p>info@dotvests.com<br />support@dotvests.com</p>
               </div>
             </div>
 
@@ -1503,13 +2000,11 @@
             us in building the future of African finance.
           </p>
           <div class="social-links">
-            <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
-            <a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a>
-            <a href="#" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-            <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
-            <a href="#" title="Telegram"
-              ><i class="fab fa-telegram-plane"></i
-            ></a>
+            <a href="#" title="Twitter (Coming Soon)" style="opacity: 0.5; cursor: not-allowed;"><i class="fab fa-twitter"></i></a>
+            <a href="#" title="Facebook (Coming Soon)" style="opacity: 0.5; cursor: not-allowed;"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" title="LinkedIn (Coming Soon)" style="opacity: 0.5; cursor: not-allowed;"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" title="Instagram (Coming Soon)" style="opacity: 0.5; cursor: not-allowed;"><i class="fab fa-instagram"></i></a>
+            <a href="#" title="Telegram (Coming Soon)" style="opacity: 0.5; cursor: not-allowed;"><i class="fab fa-telegram-plane"></i></a>
           </div>
         </div>
 
@@ -1529,12 +2024,12 @@
         <div class="footer-col">
           <h3>Legal & Compliance</h3>
           <ul class="footer-links">
-            <li><a href="#">Privacy Policy</a></li>
-            <li><a href="#">Terms of Service</a></li>
-            <li><a href="#">Compliance Framework</a></li>
-            <li><a href="#">Regulatory Information</a></li>
-            <li><a href="#">Risk Disclosure</a></li>
-            <li><a href="#">Security Audits</a></li>
+            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="terms-of-service.html">Terms of Service</a></li>
+            <li><a href="compliance-framework.html">Compliance Framework</a></li>
+            <li><a href="regulatory-information.html">Regulatory Information</a></li>
+            <li><a href="risk-disclosure.html">Risk Disclosure</a></li>
+            <li><a href="security-audits.html">Security Audits</a></li>
           </ul>
         </div>
 
@@ -1562,11 +2057,11 @@
 
       <div class="copyright">
         <p>
-          &copy; 2025 DotVest. All rights reserved. | Tokenizing Africa's
+          &copy; 2026 DotVests. All rights reserved. | Tokenizing Africa's
           Financial Future
         </p>
         <p style="margin-top: 10px; font-size: 0.85rem; opacity: 0.8">
-          <strong>Disclaimer:</strong> DotVest is currently in pre-launch phase.
+          <strong>Disclaimer:</strong> DotVests is currently in pre-launch phase.
           No investment services are offered at this time. All content is for
           informational purposes only.
         </p>
@@ -1589,6 +2084,38 @@
     </a>
 
     <script>
+      // Mobile Menu Toggle
+      function initMobileMenu() {
+        // Check if mobile menu button exists
+        const menuBtn = document.querySelector('.mobile-menu-toggle');
+        const nav = document.querySelector('nav');
+
+        if (menuBtn && nav) {
+          menuBtn.addEventListener('click', () => {
+            nav.classList.toggle('active');
+            menuBtn.innerHTML = nav.classList.contains('active')
+              ? '<i class="fas fa-times"></i>'
+              : '<i class="fas fa-bars"></i>';
+          });
+
+          // Close menu when a link is clicked
+          nav.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+              nav.classList.remove('active');
+              menuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+            });
+          });
+
+          // Close menu when clicking outside
+          document.addEventListener('click', (e) => {
+            if (!e.target.closest('header')) {
+              nav.classList.remove('active');
+              menuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+            }
+          });
+        }
+      }
+
       // Countdown Timer
       const countdown = () => {
         const endDate = new Date("2026-02-28T00:00:00").getTime();
@@ -1616,8 +2143,10 @@
           .padStart(2, "0");
 
         if (timeLeft < 0) {
+          // document.getElementById("countdown").innerHTML =
+          //   "<div class='countdown-item'><div class='countdown-value' style='font-size: 2rem;'>🚀</div><div class='countdown-label'>We're Live!</div></div>";
           document.getElementById("countdown").innerHTML =
-            "<div class='countdown-item'><div class='countdown-value' style='font-size: 2rem;'>🚀</div><div class='countdown-label'>We're Live!</div></div>";
+            "<div class='countdown-item'><div class='countdown-value' style='font-size: 2rem;'>⏳</div><div class='countdown-label'>Coming Soon</div></div>";
         }
       };
 
@@ -1749,6 +2278,23 @@
           el.style.transition = "all 0.6s cubic-bezier(0.4, 0, 0.2, 1)";
           observer.observe(el);
         });
+
+      // Initialize mobile menu
+      initMobileMenu();
+
+      // Prevent overflow on mobile when menu is active
+      function updateViewport() {
+        const nav = document.querySelector('nav');
+        const isMobile = window.innerWidth <= 768;
+        if (isMobile && nav.classList.contains('active')) {
+          document.body.style.overflow = 'hidden';
+        } else {
+          document.body.style.overflow = 'auto';
+        }
+      }
+
+      window.addEventListener('resize', updateViewport);
+      updateViewport();
     </script>
   </body>
 </html>

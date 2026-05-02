@@ -1,0 +1,107 @@
+<svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#d4af37;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#e8c55a;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="accentGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ff6b35;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ff8555;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="400" height="400" fill="#0f0f0f"/>
+
+  <!-- Decorative circles -->
+  <circle cx="80" cy="60" r="40" fill="url(#goldGradient)" opacity="0.15"/>
+  <circle cx="320" cy="340" r="50" fill="url(#accentGradient)" opacity="0.1"/>
+
+  <!-- Traditional Finance Building (Left) -->
+  <g>
+    <!-- Building base -->
+    <rect x="30" y="200" width="100" height="130" fill="#1a1a1a" stroke="url(#goldGradient)" stroke-width="2"/>
+
+    <!-- Windows -->
+    <circle cx="50" cy="220" r="8" fill="url(#goldGradient)"/>
+    <circle cx="100" cy="220" r="8" fill="url(#goldGradient)"/>
+    <circle cx="50" cy="260" r="8" fill="url(#goldGradient)"/>
+    <circle cx="100" cy="260" r="8" fill="url(#goldGradient)"/>
+    <circle cx="50" cy="300" r="8" fill="url(#goldGradient)"/>
+    <circle cx="100" cy="300" r="8" fill="url(#goldGradient)"/>
+
+    <!-- Roof -->
+    <polygon points="30,200 80,140 130,200" fill="url(#goldGradient)"/>
+
+    <!-- Door -->
+    <rect x="65" y="300" width="30" height="40" fill="url(#goldGradient)" opacity="0.7"/>
+  </g>
+
+  <!-- Blockchain/Chain Bridge (Center) -->
+  <g>
+    <!-- Left chain link -->
+    <line x1="130" y1="240" x2="180" y2="240" stroke="url(#goldGradient)" stroke-width="3" stroke-linecap="round"/>
+    <circle cx="155" cy="240" r="6" fill="url(#goldGradient)"/>
+
+    <!-- Center connecting nodes -->
+    <circle cx="200" cy="240" r="12" fill="url(#goldGradient)"/>
+
+    <!-- Right chain link -->
+    <line x1="220" y1="240" x2="270" y2="240" stroke="url(#accentGradient)" stroke-width="3" stroke-linecap="round"/>
+    <circle cx="245" cy="240" r="6" fill="url(#accentGradient)"/>
+
+    <!-- Vertical chain elements -->
+    <circle cx="200" cy="190" r="8" fill="url(#goldGradient)"/>
+    <line x1="200" y1="198" x2="200" y2="232" stroke="url(#goldGradient)" stroke-width="2"/>
+    <circle cx="200" cy="280" r="8" fill="url(#goldGradient)"/>
+    <line x1="200" y1="248" x2="200" y2="272" stroke="url(#goldGradient)" stroke-width="2"/>
+
+    <!-- Pulse effects -->
+    <circle cx="200" cy="240" r="18" fill="none" stroke="url(#goldGradient)" stroke-width="1" opacity="0.5">
+      <animate attributeName="r" values="12;25;12" dur="2s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="1;0;1" dur="2s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- Blockchain Network (Right) -->
+  <g>
+    <!-- Nodes -->
+    <circle cx="310" cy="190" r="10" fill="url(#accentGradient)"/>
+    <circle cx="340" cy="240" r="10" fill="url(#accentGradient)"/>
+    <circle cx="310" cy="290" r="10" fill="url(#accentGradient)"/>
+
+    <!-- Connections -->
+    <line x1="310" y1="200" x2="340" y2="230" stroke="url(#accentGradient)" stroke-width="2"/>
+    <line x1="340" y1="250" x2="310" y2="280" stroke="url(#accentGradient)" stroke-width="2"/>
+    <line x1="310" y1="300" x2="310" y2="200" stroke="url(#accentGradient)" stroke-width="1" opacity="0.5"/>
+
+    <!-- Data flow indicators -->
+    <circle cx="310" cy="190" r="14" fill="none" stroke="url(#accentGradient)" stroke-width="1" opacity="0.4">
+      <animate attributeName="r" values="10;18;10" dur="2.5s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- Tokenization representation -->
+  <g>
+    <!-- Coins/tokens -->
+    <g opacity="0.7">
+      <circle cx="75" cy="120" r="15" fill="url(#goldGradient)"/>
+      <text x="75" y="128" text-anchor="middle" fill="#0f0f0f" font-size="18" font-weight="bold">₦</text>
+    </g>
+    <g opacity="0.7">
+      <circle cx="325" cy="120" r="15" fill="url(#accentGradient)"/>
+      <text x="325" y="128" text-anchor="middle" fill="#0f0f0f" font-size="14" font-weight="bold">◆</text>
+    </g>
+  </g>
+
+  <!-- Growth arrows -->
+  <g opacity="0.6">
+    <path d="M 150 360 L 160 340 L 155 345" fill="url(#goldGradient)" stroke="url(#goldGradient)" stroke-width="1"/>
+    <path d="M 250 360 L 260 340 L 255 345" fill="url(#accentGradient)" stroke="url(#accentGradient)" stroke-width="1"/>
+  </g>
+
+  <!-- Text labels -->
+  <text x="80" y="360" text-anchor="middle" fill="url(#goldGradient)" font-size="12" font-weight="600">Traditional Finance</text>
+  <text x="320" y="360" text-anchor="middle" fill="url(#accentGradient)" font-size="12" font-weight="600">Blockchain</text>
+  <text x="200" y="40" text-anchor="middle" fill="url(#goldGradient)" font-size="18" font-weight="700">Financial Bridge</text>
+</svg>
